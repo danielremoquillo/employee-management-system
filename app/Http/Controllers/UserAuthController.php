@@ -12,8 +12,13 @@ class UserAuthController extends Controller
 
     public function login()
     {
-        if (Session::has('loginID')) {
-            return redirect("user/dashboard");
+        $user = User::where('id', '=', Session::get('loginID'))->first();
+
+        //Checks if thereis already logged in and checks the role of the logged user
+        if (Session::has('loginID') && $user->role_id == 1) {
+            return redirect("admin/dashboard");
+        } else if (Session::has('loginID') && $user->role_id == 2) {
+            return redirect('employee/dashboard');
         }
         return view("auth.login");
     }
@@ -41,7 +46,12 @@ class UserAuthController extends Controller
             if (Hash::check($request->password, $user->password)) {
                 $request->session()->put('loginID', $user->id);
 
-                return redirect('user/dashboard');
+                //Check if admin or not
+                if (Session::has('loginID') && $user->role_id == '1') {
+                    return redirect('admin/dashboard');
+                } else if (Session::has('loginID') && $user->role_id == '2') {
+                    return redirect('employee/dashboard');
+                }
             } else {
                 return back()->with('Error', 'Password does not matched.');
             }

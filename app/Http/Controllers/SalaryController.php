@@ -26,6 +26,6 @@ class SalaryController extends Controller
                 ->make(true);
         }
 
-        return view('user/salary', compact('salary'));
+        return view('admin/salary', compact('salary'));
     }
 }

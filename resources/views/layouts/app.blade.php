@@ -195,7 +195,7 @@
         <div class="container mx-lg-auto d-flex">
             <div class = "px-4">
 
-                <a class="navbar-brand row" href={{ url('user/dashboard') }}>
+                <a class="navbar-brand row" href={{ url('admin/dashboard') }}>
                     <span class="custom-color-navbar-brand">EMPLOYEE MANAGEMENT SYSTEM</span>
                     <span class="custom-color-navbar-sub-brand">SOFTWARE ENGINEERING I</span>
                 </a>
@@ -222,8 +222,8 @@
         <div class="container mx-md-auto row container">
                     
                     <div class = " d-flex justify-content-between">
-                        @if (Str::contains(url()->current(), "user/dashboard") || (url()->current() == "http://127.0.0.1:8000") )
-                            <a class ="custom-active-link" href= "{{ url('user/dashboard') }}">
+                        @if (Str::contains(url()->current(), "admin/dashboard") || (url()->current() == "http://127.0.0.1:8000") )
+                            <a class ="custom-active-link" href= "{{ url('admin/dashboard') }}">
                                 <span class = "d-flex">
                                       
                                     <span class="material-symbols-outlined">
@@ -234,7 +234,7 @@
                 
                             </a>
                         @else
-                            <a class ="custom-color-nav-links" href= "{{ url('user/dashboard') }}">
+                            <a class ="custom-color-nav-links" href= "{{ url('admin/dashboard') }}">
         
                                 <span class = "d-flex">
                                           
@@ -247,8 +247,8 @@
 
                             
                         @endif
-                        @if (Str::contains(url()->current(), "user/employee"))
-                            <a class ="custom-active-link" href= "{{ url('user/employee') }}">
+                        @if (Str::contains(url()->current(), "admin/employee"))
+                            <a class ="custom-active-link" href= "{{ url('admin/employee') }}">
                                 <span class = "d-flex">          
                                     <span class="material-symbols-outlined">
                                         badge
@@ -257,7 +257,7 @@
                                 </span>
                             </a>
                         @else
-                            <a class ="custom-color-nav-links" href= "{{ url('user/employee') }}">
+                            <a class ="custom-color-nav-links" href= "{{ url('admin/employee') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         badge
@@ -267,8 +267,8 @@
                             </a>
                             
                         @endif
-                        @if (Str::contains(url()->current(), "user/projects"))
-                            <a class ="custom-active-link" href= "{{ url('user/projects') }}">
+                        @if (Str::contains(url()->current(), "admin/projects"))
+                            <a class ="custom-active-link" href= "{{ url('admin/projects') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         engineering
@@ -277,7 +277,7 @@
                                 </span>
                             </a>
                         @else
-                            <a class ="custom-color-nav-links" href= "{{ url('user/projects') }}">
+                            <a class ="custom-color-nav-links" href= "{{ url('admin/projects') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         engineering
@@ -287,8 +287,8 @@
                             </a>
                             
                         @endif
-                        @if (Str::contains(url()->current(), "user/salary"))
-                            <a class ="custom-active-link" href= "{{ url('user/salary') }}">
+                        @if (Str::contains(url()->current(), "admin/salary"))
+                            <a class ="custom-active-link" href= "{{ url('admin/salary') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         payments
@@ -297,7 +297,7 @@
                                 </span>
                             </a>
                         @else
-                            <a class ="custom-color-nav-links" href= "{{ url('user/salary') }}">
+                            <a class ="custom-color-nav-links" href= "{{ url('admin/salary') }}">
                             
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
@@ -307,8 +307,8 @@
                                 </span>
                             </a>
                         @endif
-                        @if (Str::contains(url()->current(), "user/leaves"))
-                            <a class ="custom-active-link" href= "{{ url('user/leaves') }}">
+                        @if (Str::contains(url()->current(), "admin/leaves"))
+                            <a class ="custom-active-link" href= "{{ url('admin/leaves') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         logout
@@ -317,7 +317,7 @@
                                 </span>
                             </a>
                         @else
-                            <a class ="custom-color-nav-links" href= "{{ url('user/leaves') }}">
+                            <a class ="custom-color-nav-links" href= "{{ url('admin/leaves') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         logout
@@ -328,8 +328,8 @@
                             
                         @endif  
 
-                        @if (Str::contains(url()->current(), "user/users"))
-                            <a class ="custom-active-link" href= "{{ url('user/users') }}">
+                        @if (Str::contains(url()->current(), "admin/users"))
+                            <a class ="custom-active-link" href= "{{ url('admin/users') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         manage_accounts
@@ -338,7 +338,7 @@
                                 </span>
                             </a>
                         @else
-                            <a class ="custom-color-nav-links" href= "{{ url('user/users') }}">
+                            <a class ="custom-color-nav-links" href= "{{ url('admin/users') }}">
                                 <span class = "d-flex">
                                     <span class="material-symbols-outlined">
                                         manage_accounts

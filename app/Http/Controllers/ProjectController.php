@@ -41,7 +41,7 @@ class ProjectController extends Controller
                 ->make(true);
         }
 
-        return view('user/projects', compact('projects'));
+        return view('admin/projects', compact('projects'));
     }
 
 

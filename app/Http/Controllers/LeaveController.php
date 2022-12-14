@@ -41,7 +41,7 @@ class LeaveController extends Controller
                 ->make(true);
         }
 
-        return view('user/leaves', compact('leaves'));
+        return view('admin/leaves', compact('leaves'));
     }
 
     /**

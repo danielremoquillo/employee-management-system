@@ -47,7 +47,7 @@ class UserController extends Controller
                 ->make(true);
         }
 
-        return view('user/users', compact('users'));
+        return view('admin/users', compact('users'));
     }
 
     /**

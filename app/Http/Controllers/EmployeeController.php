@@ -45,7 +45,7 @@ class EmployeeController extends Controller
                 ->make(true);
         }
 
-        return view('user/employee', compact('employee'));
+        return view('admin/employee', compact('employee'));
     }
 
 
